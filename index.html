@@ -445,6 +445,30 @@
   font-family:'IBM Plex Mono', monospace; font-size:0.66rem;
   letter-spacing:0.08em; text-transform:uppercase; color:var(--gray-on-black);
 }
+  .pixels-teaser{ padding:90px 0 70px; border-top:1px solid #1c1c1a; }
+.pixels-teaser-head{
+  display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap;
+  gap:16px 32px; margin-bottom:36px;
+}
+.pixels-teaser-title{ font-size:clamp(1.5rem,2.6vw,2rem); font-weight:700; letter-spacing:-0.01em; }
+.pixels-teaser-link{
+  font-family:'IBM Plex Mono', monospace; font-size:0.74rem;
+  letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--gray-on-black); transition:color .15s ease; white-space:nowrap;
+}
+.pixels-teaser-link:hover{ color:var(--green); }
+.pixels-teaser-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:20px; }
+.pixels-tile{
+  aspect-ratio:4/3;
+  border:1px solid #2a2a27;
+  background:#0a0a09;
+  overflow:hidden;
+  transition:border-color .15s ease;
+}
+.pixels-tile:hover{ border-color:var(--green); }
+.pixels-tile img{ width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
+@media (max-width:760px){ .pixels-teaser-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:480px){ .pixels-teaser-grid{ grid-template-columns:1fr; } }
 @media (max-width:760px){
   .writing-teaser-grid{ grid-template-columns:1fr 1fr; }
 }
@@ -673,10 +697,24 @@
     </a>
   </div>
 </section>
+  <section class="pixels-teaser wrap">
+  <div class="pixels-teaser-head">
+    <span class="pixels-teaser-title">Extra Pixels — loose ends, not case studies</span>
+    <a href="playground.html" class="pixels-teaser-link">View all →</a>
+  </div>
+  <a href="playground.html" style="display:contents;">
+    <div class="pixels-teaser-grid">
+      <div class="pixels-tile"><img src="images/teaser-saleszen.jpg" alt="SalesZen dashboard exploration"></div>
+      <div class="pixels-tile"><img src="images/teaser-meridian-web.jpg" alt="Meridian Design Studio web exploration"></div>
+      <div class="pixels-tile"><img src="images/teaser-focus-reward.jpg" alt="Focus and reward app concept"></div>
+    </div>
+  </a>
+</section>
 
   <footer class="wrap">
     <span>© 2026 Hope</span>
     <a href="mailto:hopemidah@gmail.com">hopemidah@gmail.com</a>
+    <a href="playground.html">Extra Pixels</a>
   </footer>
 </main>
 
